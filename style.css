@@ -7,6 +7,45 @@
 body{
   background-color: #f0f0f0;
 }
+.nav-bar {
+    margin-bottom: 20px;
+}
+
+.nav1 {
+    background-color: #2D2D2D;
+    padding: 15px;
+}
+
+.nav1 ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav1 li {
+    display: inline;
+}
+
+.nav1 a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav1 .logo {
+    color: #C9B458;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav1 .menu {
+    display: flex;
+    gap: 15px;
+}
 
 .carousel-container{
   width: 100%;
