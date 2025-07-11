@@ -107,7 +107,7 @@ body{
   width: 100%;
   max-width: 100vw;
   border: black solid 1px;
-  height: 300px;
+   height: 400px;
   overflow: hidden;
   background-color: #FDBF5A;
   display: flex;
@@ -193,4 +193,79 @@ body{
   font-size: 20px;
   font-weight: 100;
   background-color: #f0f0f0;
+}
+
+#card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  background-image: url('Images/1-gateway-of-india-state-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Add faint white overlay */
+
+
+#card-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* ← Adjust opacity here */
+  z-index: 2;
+}
+.hidden{
+  display: none;
+}
+/* Keep card content above overlay */
+#card-container > * {
+  position: relative;
+  z-index: 3;
+}
+
+#card{
+  padding: 20px;
+    width : 350px;
+    height : 450px;
+    border: 1px, solid, black;
+    border-radius : 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #F36D21;
+}
+#image{
+ display: flex;
+    align-items : center;
+    justify-content: center;
+}
+#image >img{
+  border-radius: 35px;
+   padding : 20px;
+    width : 300px;
+    height : 300px;
+    object-fit: cover;
+}
+.weather-text{
+   padding: 10px;
+
+ text-align: center;
+ width: 100%;
+ max-width: 100vw;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.weather-info{
+  text-align: center;
+  
 }

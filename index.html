@@ -3,57 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Incredible Maharahstra</title>
+  <title>Incredible Maharashtra</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Vast+Shadow&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&family=Vast+Shadow&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&family=Vast+Shadow&display=swap" rel="stylesheet">
 </head>
 <body>
 
- <div class="nav-bar">
-        <nav class="nav1">
-            <ul>
-                <li class="logo">
-                   Incredible Maharashtra !
-                </li>
-                <li class="menu">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+  <!-- Navigation -->
+  <div class="nav-bar">
+    <nav class="nav1">
+      <ul>
+        <li class="logo">Incredible Maharashtra !</li>
+        <li class="menu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
+  <!-- Image Carousel -->
   <div class="carousel-container">
-   
     <div class="carousel">
+      <img src="Images/pratapgad.jpg" alt="Pratapgad" class="carousel-image active">
+      <img src="Images/Raigad-2.avif" alt="Raigad" class="carousel-image">
+      <img src="Images/sinhgad-4.jpg" alt="Sinhgad" class="carousel-image">
+      <img src="Images/rajgad.png" alt="Rajgad" class="carousel-image">
 
-      <img src="Images\pratapgad.jpg" alt="pratapgad" class="carousel-image active">
-       <img src="Images\Raigad-2.avif" alt="pratapgad" class="carousel-image ">
-        <img src="Images\sinhgad-4.jpg" alt="pratapgad" class="carousel-image ">
-         <img src="Images\rajgad.png" alt="pratapgad" class="carousel-image ">
+      <div class="controls">
+        <button id="prev">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/long-arrow-left.png" alt="Previous">
+        </button>
 
-         <div class="controls">
-          <button id = "prev"><img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/long-arrow-left.png" alt="long-arrow-left"/>></button>
-          
-         <h4 class="caption">Pratapgad</h4>
-          <button id = "next"> <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/long-arrow-right--v1.png" alt="long-arrow-right--v1"/></button>
+        <h4 class="caption">Pratapgad</h4>
 
-         
-         </div>
+        <button id="next">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/long-arrow-right--v1.png" alt="Next">
+        </button>
+      </div>
     </div>
   </div>
 
+  <!-- District & Place Dropdown -->
   <div class="dropdown-container">
-
     <div class="text-container">
       <div class="main-text-container">
         <div class="main-text">
-          <h3>Explore Maharahstra</h3>
+          <h3>Explore Maharashtra</h3>
         </div>
       </div>
       <div class="subtext-container">
@@ -62,22 +62,44 @@
         </div>
       </div>
     </div>
+
     <div class="dropdown-menu">
-
       <div class="district-btn">
-         <select  id="district">
-        <option value=""> District</option>
-      </select>
+        <select id="district">
+          <option value="">District</option>
+        </select>
       </div>
-     
-       <div class="place-btn">
-         <select name="" id="place">
-        <option value=""> Place</option>
-      </select>
-       </div>
 
+      <div class="place-btn">
+        <select id="place">
+          <option value="">Place</option>
+        </select>
+      </div>
     </div>
   </div>
- <script src="script.js"></script>
+
+  <!-- Weather Card -->
+  
+  <div  id="card-container"  >
+    <div id="card" class="hidden" >
+      <div id="image"></div>
+      <div class="weather-info">
+        <h3 id="fort-name"></h3>
+        <p id="temperature"></p>
+        <p id="summary"></p>
+        <p id="suggestion"></p>
+       
+      </div>
+     
+    </div>
+     <p id="error-message" class="hidden">data not found</p>
+  </div>
+
+  <!-- <footer>
+    <div class="footer-container">
+      <div></div>
+    </div>
+  </footer> -->
+  <script src="script.js"></script>
 </body>
 </html>
